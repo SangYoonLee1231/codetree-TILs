@@ -6,9 +6,15 @@ def print_num():
         print(elem, end = ' ')
     print()
 
+def condition():
+    for i in range(n-2):
+        if num[i] == num[i+1] and num[i+1] == num[i+2]:
+            return True
+    return False
+
 def choose(curr_num):
     if curr_num == n + 1:
-        if curr_num >= 4 and num[n-1] == num[n-2] and num[n-2] == num[n-3]:
+        if curr_num >= 4 and condition():
             return
         print_num()
         return
