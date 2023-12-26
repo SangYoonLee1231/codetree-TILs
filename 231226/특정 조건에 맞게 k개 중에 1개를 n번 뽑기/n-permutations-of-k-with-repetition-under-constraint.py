@@ -41,7 +41,7 @@ def choose(curr_num):
         return
     
     for i in range(1, k+1):
-        if curr_num >= 4 and num[curr_num - 1] == num[curr_num - 2] and num[curr_num - 2] == num[curr_num - 3]:
+        if curr_num >= 4 and num[curr_num - 2] == num[curr_num - 3] and num[curr_num - 3] == num[curr_num - 4]:
             continue
         num.append(i)
         choose(curr_num + 1)
