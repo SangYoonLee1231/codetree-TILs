@@ -8,7 +8,7 @@ def print_num():
 
 def choose(curr_num):
     if curr_num == n + 1:
-        if curr_num >= 3 and num[n] == num[n-1] and num[n] == num[n-2]:
+        if curr_num >= 4 and num[n] == num[n-1] and num[n] == num[n-2]:
             return
         print_num()
         return
