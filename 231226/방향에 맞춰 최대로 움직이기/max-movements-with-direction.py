@@ -1,6 +1,5 @@
 n = int(input())
 max_count = 0
-count = 0
 
 loc_list = [
     list(map(int, input().split()))
@@ -24,25 +23,23 @@ def in_range(r, c):
 
 
 # (r-1)행 (c-1)열 칸에서 다음으로 이동할 수 있는 칸 탐색하는 함수
-def search(cr, cc):
-    global r, c, count, max_count
+def search(cr, cc, count):
+    global r, c, max_count
 
     loc_num = loc_list[cr][cc]
     dir_num = dir_list[cr][cc] - 1
 
+    max_count = max(count, max_count)
+
     i = 1
     while True:
         nr, nc = cr + (i * dr[dir_num]), cc + (i * dc[dir_num])
-        if cr == r - 1 and cc == c - 1:
-            max_count = max(count, max_count)
-            count = 0
         if not in_range(nr, nc):
             return
         if loc_num < loc_list[nr][nc]:
-            count += 1
-            search(nr, nc)
+            search(nr, nc, count + 1)
         i += 1
 
 
-search(r-1, c-1)
+search(r-1, c-1, 0)
 print(max_count)
