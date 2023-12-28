@@ -28,20 +28,20 @@ def find_shortest(selected_dot):
     answer = min(answer, max_dist)
 
 
-def choose_dot(selected_num):
+def choose_dot(selected_num, idx):
     if selected_num == m:
         find_shortest(selected_dot)
     
-    for i in range(len(lst)):
+    for i in range(idx, len(lst)):
         if visited[i] == True:
             continue
 
         visited[i] = True
         selected_dot.append(lst[i])
-        choose_dot(selected_num + 1)
+        choose_dot(selected_num + 1, i)
         selected_dot.pop()
         visited[i] = False
 
 
-choose_dot(0)
+choose_dot(0, 0)
 print(answer)
