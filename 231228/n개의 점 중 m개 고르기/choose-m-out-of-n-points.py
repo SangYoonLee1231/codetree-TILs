@@ -19,10 +19,13 @@ def find_shortest(selected_dot):
     global answer
 
     length = len(selected_dot)
+    max_dist = 0
     
     for i in range(length):
         for j in range(i + 1, length):
-            answer = min(answer, calc_dist(selected_dot[i][0], selected_dot[i][1], selected_dot[j][0], selected_dot[j][1]))
+            max_dist = max(max_dist, calc_dist(selected_dot[i][0], selected_dot[i][1], selected_dot[j][0], selected_dot[j][1]))
+    
+    answer = min(answer, max_dist)
 
 
 def choose_dot(selected_num):
