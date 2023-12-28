@@ -21,26 +21,29 @@ def calc_sum():
     answer = max(answer, curr_sum)
 
 
-def choose(selected_num, row, col):
+def choose(selected_num):
     if selected_num == n:
         calc_sum()
         return
 
     for r in range(n):
+        if visited_row[r]:
+            continue
+
         for c in range(n):
-            if visited_row[r] or visited_col[c]:
+            if visited_col[c]:
                 continue
             
             visited_row[r] = True
             visited_col[c] = True
             selected_lst.append(lst[r][c])
 
-            choose(selected_num + 1, r, c)
+            choose(selected_num + 1)
 
             selected_lst.pop()
             visited_col[c] = False
             visited_row[r] = False
 
 
-choose(0, 0, 0)
+choose(0)
 print(answer)
