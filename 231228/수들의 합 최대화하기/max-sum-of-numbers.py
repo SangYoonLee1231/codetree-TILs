@@ -1,6 +1,6 @@
 n = int(input())
-visited_row = [False] * (n + 1)
-visited_col = [False] * (n + 1)
+visited_row = [False] * (n)
+visited_col = [False] * (n)
 answer = 0
 selected_lst = []
 
@@ -15,14 +15,14 @@ def calc_sum():
 
     curr_sum = 0
     
-    for i in range(n):
-        curr_sum += lst[selected_lst[i][0]][selected_lst[i][1]]
+    for elem in selected_lst:
+        curr_sum += elem
 
     answer = max(answer, curr_sum)
 
 
 def choose(selected_num, row, col):
-    if selected_num == 3:
+    if selected_num == n:
         calc_sum()
         return
 
@@ -33,7 +33,7 @@ def choose(selected_num, row, col):
             
             visited_row[r] = True
             visited_col[c] = True
-            selected_lst.append([r, c])
+            selected_lst.append(lst[r][c])
 
             choose(selected_num + 1, r, c)
 
