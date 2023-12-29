@@ -51,7 +51,7 @@ def search(curr_v):
     for idx, elem in enumerate(graph[curr_v]):
         if not visited[idx] and elem:
             visited[idx] = True
-            search(curr_v)
+            search(idx)
 
 
 visited[1] = True
