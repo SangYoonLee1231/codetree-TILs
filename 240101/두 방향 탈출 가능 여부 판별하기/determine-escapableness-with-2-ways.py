@@ -24,7 +24,7 @@ def condition(r, c):
         return False
     if visited[r][c]:
         return False
-    if snake[r][c]:
+    if not snake[r][c]:
         return False
     return True
 
