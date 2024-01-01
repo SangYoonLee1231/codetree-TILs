@@ -33,7 +33,7 @@ def dfs(r, c):
     for dr, dc in zip(drs, dcs):
         nr, nc = r + dr, c + dc
         if condition(nr, nc):
-            visited[nr][nc] = True
+            visited[nr][nc] = 1
             dfs(nr, nc)
 
 
