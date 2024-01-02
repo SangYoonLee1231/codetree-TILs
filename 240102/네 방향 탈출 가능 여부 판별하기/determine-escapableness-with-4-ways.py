@@ -25,7 +25,13 @@ def push(r, c):
     visited[r][c] = 1
 
 
+def in_range(r, c):
+    return r >= 0 and r < n and c >= 0 and c < m
+
+
 def can_move(r, c):
+    if not in_range(r, c):
+        return False
     if visited[r][c]:
         return False
     if not snake[r][c]:
