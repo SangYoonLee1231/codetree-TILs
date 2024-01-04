@@ -45,8 +45,8 @@ def dfs(r, c):
 for i in range(n):
     for j in range(n):
         if not visited[i][j]:
-            cnt = 0
-
+            cnt = 1
+            visited[i][j] = 1
             dfs(i, j)
 
             if cnt >= 4:
