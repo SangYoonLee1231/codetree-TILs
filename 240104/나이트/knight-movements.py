@@ -5,7 +5,7 @@ r1, c1, r2, c2 = tuple(map(int, input().split()))
 r1, c1, r2, c2 = r1 - 1, c1 - 1, r2 - 1, c2 - 1
 q = deque()
 
-visited = [
+shortest_dist = [
     [0] * n
     for _ in range(n)
 ]
@@ -16,7 +16,7 @@ dcs = [-1, -2, -2, -1, 1, 2, 2, 1]
 
 def move(r, c, cnt):
     q.append((r, c, cnt))
-    visited[r][c] = 1
+    shortest_dist[r][c] = cnt
 
 
 def in_range(r, c):
@@ -26,7 +26,7 @@ def in_range(r, c):
 def can_move(nr, nc):
     if not in_range(nr, nc):
         return False
-    if visited[nr][nc]:
+    if shortest_dist[nr][nc]:
         return False
     return True
 
@@ -40,9 +40,11 @@ def bfs():
             if can_move(nr, nc):
                 move(nr, nc, cnt + 1)
                 if nr == r2 and nc == c2:
-                    return cnt + 1
+                    return
 
 
 move(r1, c1, 0)
-answer = bfs()
+bfs()
+
+answer = shortest_dist[r2][c2]
 print(answer if answer else -1)
