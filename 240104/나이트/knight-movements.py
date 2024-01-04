@@ -44,4 +44,5 @@ def bfs():
 
 
 move(r1, c1, 0)
-print(bfs())
+answer = bfs()
+print(answer if answer else -1)
