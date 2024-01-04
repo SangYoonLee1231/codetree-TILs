@@ -53,5 +53,8 @@ bfs()
 
 for i in range(n):
     for j in range(n):
-        print(answer[i][j], end=" ")
+        if answer[i][j] == -1 and start_box[i][j] == 1:
+            print(-2, end=" ")
+        else:
+            print(answer[i][j], end=" ")
     print()
