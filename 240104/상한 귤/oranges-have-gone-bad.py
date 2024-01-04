@@ -43,14 +43,30 @@ def bfs():
                 answer[nr][nc] = time + 1
 
 
-for i in range(n):
-    for j in range(n):
-        if start_box[i][j] == 2:
-            q.append((i, j, 0))
-            answer[i][j] = 0
+# 시작점 구하기
+# for i in range(n):
+#     for j in range(n):
+#         if start_box[i][j] == 2:
+#             q.append((i, j, 0))
+#             answer[i][j] = 0
 
+# 시작점 구하기 개선 코드
+s_pos = [
+    (i, j)
+    for i in range(n)
+    for j in range(n)
+    if start_box[i][j] == 2
+]
+for elem in s_pos:
+    r, c = elem
+    q.append((r, c, 0))
+    answer[r][c] = 0
+
+
+# BFS 수행
 bfs()
 
+# 결과값 출력
 for i in range(n):
     for j in range(n):
         if answer[i][j] == -1 and start_box[i][j] == 1:
