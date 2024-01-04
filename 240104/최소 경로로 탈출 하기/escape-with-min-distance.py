@@ -50,4 +50,5 @@ def bfs():
 push(0, 0, 0)
 bfs()
 
-print(shortest_dist[n - 1][m - 1])
+answer = shortest_dist[n - 1][m - 1]
+print(answer if answer else -1)
