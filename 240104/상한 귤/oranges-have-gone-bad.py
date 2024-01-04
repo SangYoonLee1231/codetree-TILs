@@ -57,6 +57,7 @@ s_pos = [
     for j in range(n)
     if start_box[i][j] == 2
 ]
+
 for elem in s_pos:
     r, c = elem
     q.append((r, c, 0))
