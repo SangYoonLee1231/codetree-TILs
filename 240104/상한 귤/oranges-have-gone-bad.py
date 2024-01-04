@@ -25,7 +25,7 @@ def in_range(r, c):
 def can_go(r, c):
     if not in_range(r, c):
         return False
-    if start_box[r][c] == 0:
+    if not start_box[r][c]:
         return False
     if answer[r][c] != -1:
         return False
