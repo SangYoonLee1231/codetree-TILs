@@ -47,6 +47,7 @@ move(r1, c1, 0)
 bfs()
 
 answer = shortest_dist[r2][c2]
+
 if r1 == r2 and c1 == c2:
     print(0)
 else:
