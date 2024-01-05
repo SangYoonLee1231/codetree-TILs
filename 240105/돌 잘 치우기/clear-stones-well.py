@@ -44,6 +44,10 @@ def initization():
 def erase_rock(curr_rock_num, r, c):
     global max_movable_squares
 
+    if m == 0:
+        max_movable_squares = check_squares()
+        return
+
     if curr_rock_num == m:
         # 초기화 작업
         initization()
