@@ -2,7 +2,7 @@ m1, d1, m2, d2 = tuple(map(int, input().split()))
 target_day = input()
 
 week = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-num_of_days = [0, 31, 30, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+num_of_days = [0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
 start_day, end_day = 0, 0
 
