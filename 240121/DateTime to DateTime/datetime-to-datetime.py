@@ -11,4 +11,4 @@ def find_times():
     return end_time - start_time
 
 answer = find_times()
-print(answer if answer else -1)
+print(answer if answer >= 0 else -1)
