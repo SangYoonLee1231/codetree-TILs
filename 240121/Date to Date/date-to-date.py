@@ -13,4 +13,4 @@ for month in range(0, m2):
     end_days += num_of_days[month]
 end_days += d2
 
-print(end_days - start_days)
+print(end_days - start_days + 1)
