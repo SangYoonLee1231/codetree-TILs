@@ -15,11 +15,11 @@ for month in range(1, m2):
 end_day += d2
 
 # Part 1
-gap = end_day - start_day
+gap = end_day - start_day + 1
 answer = gap // 7
 
 # Part 2
-if gap % 7 > week.index(target_day):
+if (gap % 7) > week.index(target_day):
     answer += 1
 
 print(answer)
