@@ -21,7 +21,7 @@ visited[0][0] = True
 
 
 def in_range(r, c):
-    return r >= 0 and r < n and c >= 0 and c < n
+    return r >= 0 and r < n and c >= 0 and c < m
 
 
 for i in range(2, n * m + 1):
