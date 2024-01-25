@@ -24,5 +24,12 @@ for _ in range(2):
     length = length - (e - s + 1)
 
 print(length)
-for i in range(length):
-    print(lst[length - 1 + i])
+
+answer = []
+
+for i in range(length, -1, -1):
+    if lst[i]:
+        answer.append(lst[i])
+
+for i in range(len(answer) - 1, -1, -1):
+    print(answer[i])
