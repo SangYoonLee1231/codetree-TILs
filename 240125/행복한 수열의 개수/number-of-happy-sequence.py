@@ -6,7 +6,7 @@ grid = [
 ]
 
 line_count = 1
-answer = 1
+answer = 0
 cnt = 1
 
 for i in range(n):
