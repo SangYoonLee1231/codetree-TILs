@@ -35,4 +35,4 @@ for i in range(n):
         answer += 1
     line_count = 0
 
-print(answer)
+print(answer if answer else 0)
