@@ -10,7 +10,7 @@ for _ in range(2):
     s, e = s - 1, e - 1
     s, e = (n - length) + s, (n - length) + e
 
-    temp = [0] * length
+    temp = [-1] * length
 
     temp_idx = length - 1
     for i in range(n - 1, n - 1 - length, -1):
@@ -28,7 +28,7 @@ print(length)
 answer = []
 
 for i in range(length, -1, -1):
-    if lst[i]:
+    if not lst[i] == -1:
         answer.append(lst[i])
 
 for i in range(len(answer) - 1, -1, -1):
