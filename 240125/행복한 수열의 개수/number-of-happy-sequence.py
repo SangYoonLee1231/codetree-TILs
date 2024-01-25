@@ -19,6 +19,7 @@ for i in range(n):
     
     if line_count >= m:
         answer += 1
+    cnt = 1
     line_count = 0
 
 cnt = 1
@@ -33,6 +34,7 @@ for i in range(n):
     
     if line_count >= m:
         answer += 1
+    cnt = 1
     line_count = 0
 
 if n >= 2:
