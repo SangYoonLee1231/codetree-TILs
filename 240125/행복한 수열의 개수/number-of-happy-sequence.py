@@ -23,9 +23,9 @@ for i in range(n):
 
 cnt = 1
 
-for i in range(n - 1):
-    for j in range(n):
-        if grid[j][i] == grid[j][i + 1]:
+for i in range(n):
+    for j in range(n - 1):
+        if grid[j][i] == grid[j + 1][i]:
             cnt += 1
         else: 
             line_count = max(line_count, cnt)
