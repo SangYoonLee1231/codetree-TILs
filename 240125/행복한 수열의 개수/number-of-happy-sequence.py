@@ -5,7 +5,7 @@ grid = [
     for _ in range(n)
 ]
 
-line_count = 1
+line_count = 0
 answer = 0
 cnt = 1
 
@@ -35,4 +35,4 @@ for i in range(n):
         answer += 1
     line_count = 0
 
-print(answer if answer else 0)
+print(answer if answer else 2)
