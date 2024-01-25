@@ -5,8 +5,8 @@ grid = [
     for _ in range(n)
 ]
 
-line_count = 0
-answer = 0
+line_count = 1
+answer = 1
 cnt = 1
 
 for i in range(n):
