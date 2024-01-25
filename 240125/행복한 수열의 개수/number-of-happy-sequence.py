@@ -35,4 +35,7 @@ for i in range(n):
         answer += 1
     line_count = 0
 
-print(answer if answer else 2)
+if n >= 2:
+    print(answer)
+else:
+    print(2)
