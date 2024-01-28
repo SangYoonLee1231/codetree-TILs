@@ -11,7 +11,7 @@ answer = 0
 def search_row(r):
     global answer
 
-    max_count = 0
+    max_count = 1
     count = 1
 
     for c in range(n - 1):
@@ -29,7 +29,7 @@ def search_row(r):
 def search_col(c):
     global answer
 
-    max_count = 0
+    max_count = 1
     count = 1
 
     for r in range(n - 1):
