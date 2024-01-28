@@ -18,10 +18,9 @@ def search_row(r):
         if grid[r][c] == grid[r][c + 1]:
             count += 1
         else:
-            max_count = max(max_count, count)
             count = 1
-    
-    max_count = max(max_count, count)
+        
+        max_count = max(max_count, count)
     
     if max_count >= m:
         answer += 1
@@ -37,10 +36,9 @@ def search_col(c):
         if grid[r][c] == grid[r + 1][c]:
             count += 1
         else:
-            max_count = max(max_count, count)
             count = 1
 
-    max_count = max(max_count, count)
+        max_count = max(max_count, count)
     
     if max_count >= m:
         answer += 1
