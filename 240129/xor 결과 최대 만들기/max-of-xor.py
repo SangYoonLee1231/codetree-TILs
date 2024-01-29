@@ -1,6 +1,7 @@
 n, m = tuple(map(int, input().split()))
 lst = list(map(int, input().split()))
 chosen = []
+visited = [False] * n
 answer = 0
 
 
@@ -19,10 +20,13 @@ def backtrack(curr_num):
         answer = max(answer, calc_xor())
         return
     
-    for elem in lst:
-        chosen.append(elem)
-        backtrack(curr_num + 1)
-        chosen.pop()
+    for idx, elem in enumerate(lst):
+        if not visited[idx]:
+            chosen.append(elem)
+            visited[idx] = True
+            backtrack(curr_num + 1)
+            visited[idx] = False
+            chosen.pop()
 
 
 backtrack(0)
