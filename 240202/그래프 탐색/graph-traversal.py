@@ -28,34 +28,34 @@ print(answer)
 
 
 # Sol 2) 인접 행렬로 해결
-n, m = tuple(map(int, input().split()))
+# n, m = tuple(map(int, input().split()))
 
-graph = [
-    [0] * (n + 1)
-    for _ in range(n + 1)
-]
+# graph = [
+#     [0] * (n + 1)
+#     for _ in range(n + 1)
+# ]
 
-visited = [False for _ in range(n + 1)]
+# visited = [False for _ in range(n + 1)]
 
-answer = -1
+# answer = -1
 
-for _ in range(m):
-    start, end = tuple(map(int, input().split()))
-    graph[start][end] = 1
-    graph[end][start] = 1
-
-
-def search(curr_v):
-    for idx, elem in enumerate(graph[curr_v]):
-        if not visited[idx] and elem:
-            visited[idx] = True
-            search(idx)
+# for _ in range(m):
+#     start, end = tuple(map(int, input().split()))
+#     graph[start][end] = 1
+#     graph[end][start] = 1
 
 
-visited[1] = True
-search(1)
+# def search(curr_v):
+#     for idx, elem in enumerate(graph[curr_v]):
+#         if not visited[idx] and elem:
+#             visited[idx] = True
+#             search(idx)
 
-for elem in visited:
-    if elem:   answer += 1
 
-print(answer)
+# visited[1] = True
+# search(1)
+
+# for elem in visited:
+#     if elem:   answer += 1
+
+# print(answer)
