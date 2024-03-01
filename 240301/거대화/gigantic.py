@@ -1,5 +1,6 @@
 import sys
 sys.setrecursionlimit(100000)
+sys.set_int_max_str_digits(0)
 
 
 n, k = tuple(map(int, input().split()))
