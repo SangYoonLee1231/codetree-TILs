@@ -1,3 +1,7 @@
+import sys
+sys.setrecursionlimit(100000)
+
+
 n, k = tuple(map(int, input().split()))
 
 num_lst = list(input())
