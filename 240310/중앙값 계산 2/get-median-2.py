@@ -6,7 +6,7 @@ lst = []
 
 def print_median(n):
     temp_lst = sorted(lst)
-    print(lst[n // 2], end=' ')
+    print(temp_lst[n // 2], end=' ')
 
 
 for i in range(n):
