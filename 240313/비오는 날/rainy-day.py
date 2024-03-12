@@ -7,14 +7,6 @@ input_lst = [
 
 rain_lst = []
 
-# months_common_year = [
-#     31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31
-# ]
-
-# months_leap_year = [
-#     31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31
-# ]
-
 # Rain 요소만 뽑아 담은 rain_lst 구성
 for elem in input_lst:
     if elem[2] == 'Rain':
@@ -29,8 +21,7 @@ for i in range(rain_lst_len):
     time = year * 372 + month * 31 + day
     rain_lst[i].append(day)
 
-sorted(rain_lst, key=lambda x:x[3])
-
+rain_lst.sort(key=lambda x:x[3])
 rain_lst[0].pop()
 
 for elem in rain_lst[0]:
