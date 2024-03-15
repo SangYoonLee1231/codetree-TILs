@@ -1,7 +1,7 @@
 n = int(input())
 
 dp = [[-1] for _ in range(n + 1)]
-dp[n] = 0
+dp[n] = 1
 
 
 def dfs(curr_n):
@@ -16,7 +16,7 @@ def dfs(curr_n):
         if dp[next_n] == -1:
             dfs(next_n)
 
-        dp[curr_n] = dp[next_n] + 1
+        dp[curr_n] += dp[next_n]
 
 
 dfs(0)
