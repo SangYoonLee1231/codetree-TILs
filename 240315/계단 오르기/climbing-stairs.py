@@ -1,6 +1,6 @@
 n = int(input())
 
-dp = [[-1] for _ in range(n + 1)]
+dp = [-1 for _ in range(n + 1)]
 dp[n] = 1
 
 
