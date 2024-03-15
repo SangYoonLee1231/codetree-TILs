@@ -17,6 +17,7 @@ def dfs(curr_n):
             dfs(next_n)
         
         dp[curr_n] += dp[next_n]
+        dp[curr_n] %= 10007
 
 
 dfs(0)
