@@ -10,7 +10,8 @@ for _ in range(k):
     for i in range(a, b + 1):
         lst[i] += 1
     
-for elem in lst:
-    ans = max(ans, elem)
+# for elem in lst:
+#     ans = max(ans, elem)
+ans = max(lst)
 
 print(ans)
