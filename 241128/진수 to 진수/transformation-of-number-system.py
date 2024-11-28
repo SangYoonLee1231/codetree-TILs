@@ -15,4 +15,5 @@ while num > 0:
     ans_lst.append(num % b)
     num //= b
 
-print(''.join(map(str, ans_lst)))
+for elem in ans_lst[::-1]:
+    print(elem, end="")
