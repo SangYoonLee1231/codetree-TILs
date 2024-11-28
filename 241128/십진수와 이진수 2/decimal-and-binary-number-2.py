@@ -2,11 +2,15 @@ n = int(input())
 
 # Step 1. 2진수 n -> 10진수 n
 n_decimal = 0
-lst_n = list(str(n))
-lst_n_len = len(lst_n)
+# lst_n = list(str(n))
+# lst_n_len = len(lst_n)
 
-for i in range(len(lst_n)):
-    n_decimal += int(lst_n[i]) * (2 ** (lst_n_len - i - 1))
+# for i in range(len(lst_n)):
+#     n_decimal += int(lst_n[i]) * (2 ** (lst_n_len - i - 1))
+n_lst = list(str(n))
+
+for elem in n_lst:
+    n_decimal = n_decimal * 2 + int(elem)
 
 # Step 2. 10진수 n * 17
 n_decimal *= 17
