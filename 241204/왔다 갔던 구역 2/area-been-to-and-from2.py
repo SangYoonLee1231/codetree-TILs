@@ -26,7 +26,7 @@ def move():
         for _ in range(x):
             curr += mapper[dir_x]
             trail[curr] += 1
-        curr += mapper[dir_x]
+        # curr += mapper[dir_x]
     
 
 def check_answer():
