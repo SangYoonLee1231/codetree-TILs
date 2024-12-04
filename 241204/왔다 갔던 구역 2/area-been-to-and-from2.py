@@ -23,10 +23,11 @@ def move():
         x = int(inputs[i][0])
         dir_x = inputs[i][1]
 
+        if i == 0:
+            curr += mapper[dir_x]
         for _ in range(x):
             curr += mapper[dir_x]
             trail[curr] += 1
-        # curr += mapper[dir_x]
     
 
 def check_answer():
