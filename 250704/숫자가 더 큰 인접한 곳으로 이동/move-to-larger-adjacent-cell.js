@@ -5,6 +5,8 @@ let [n, r, c] = input[0].split(' ').map(Number);
 let grid = input.slice(1, n + 1).map(line => line.split(' ').map(Number));
 
 // Please Write your code here.
+[r, c] = [r - 1, c - 1];
+
 const [dr, dc] = [[-1, 1, 0, 0], [0, 0, -1, 1]];
 
 const answerArr = [grid[r][c]];
@@ -39,5 +41,4 @@ function inRange(r, c) {
     return r >= 0 && r < n && c >= 0 && c < n;
 }
 
-[r, c] = [r - 1, c - 1];
 solution();
