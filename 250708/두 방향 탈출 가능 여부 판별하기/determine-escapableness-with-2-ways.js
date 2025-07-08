@@ -34,7 +34,7 @@ function canGo(r, c) {
 }
 
 function inRange(r, c) {
-    return r >= 0 && r < n && c >= 0 && c < n;
+    return r >= 0 && r < n && c >= 0 && c < m;
 }
 
 function canEscape(r, c) {
