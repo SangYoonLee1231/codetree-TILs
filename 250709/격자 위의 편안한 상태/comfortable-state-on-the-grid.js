@@ -25,7 +25,7 @@ function paintAndCheck(r, c) {
         }
     }
 
-    if (checkPaint >= 3) {
+    if (checkPaint === 3) {
         // 편안한 상태
         return 1;
     } else {
