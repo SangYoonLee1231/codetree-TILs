@@ -15,13 +15,17 @@ class Person {
     }
 }
 
-personLines.forEach((elem) => {
-    const [name, addr, city] = elem.split(" ");;
-    peoples.push(new Person(name, addr, city));
-})
+function solution() {
+    personLines.forEach((elem) => {
+        const [name, addr, city] = elem.split(" ");;
+        peoples.push(new Person(name, addr, city));
+    })
 
-const sortedPeoples = peoples.sort((a, b) => b.name.localeCompare(a.name));
+    const sortedPeoples = peoples.sort((a, b) => b.name.localeCompare(a.name));
 
-console.log(`name ${sortedPeoples[0].name}`);
-console.log(`addr ${sortedPeoples[0].addr}`);
-console.log(`city ${sortedPeoples[0].city}`);
+    console.log(`name ${sortedPeoples[0].name}`);
+    console.log(`addr ${sortedPeoples[0].addr}`);
+    console.log(`city ${sortedPeoples[0].city}`);
+}
+
+solution();
