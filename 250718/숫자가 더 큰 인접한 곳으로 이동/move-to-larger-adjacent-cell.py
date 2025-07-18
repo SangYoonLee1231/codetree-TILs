@@ -7,7 +7,7 @@ grid = [
 ]
 
 # Please write your code here.
-drs, dcs = [-1, 1, 0, 0], [0, 0, 1, -1]
+drs, dcs = [-1, 1, 0, 0], [0, 0, -1, 1]
 r, c = r - 1, c - 1
 
 
