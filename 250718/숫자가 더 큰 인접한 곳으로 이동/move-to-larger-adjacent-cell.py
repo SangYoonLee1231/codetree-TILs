@@ -25,7 +25,6 @@ def move():
     return False
 
 
-
 def inRange(r, c):
     return r >= 0 and r < n and c >= 0 and c < n
 
