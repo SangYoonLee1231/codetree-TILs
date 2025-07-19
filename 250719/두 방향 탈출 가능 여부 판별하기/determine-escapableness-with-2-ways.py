@@ -22,10 +22,7 @@ def dfs(r, c, depth):
         if can_go(nr, nc):
             visited[nr][nc] = 1
             grid[nr][nc] = depth
-
             dfs(nr, nc, depth + 1)
-
-            visited[nr][nc] = 0
 
 
 def can_go(r, c):
