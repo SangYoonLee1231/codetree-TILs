@@ -6,7 +6,7 @@ snake_grid = [list(map(int, input().split())) for _ in range(n)]
 # Please write your code here.
 drs, dcs = [0, 0, 1, -1], [1, -1, 0, 0]
 
-grid = [
+visited = [
     [0] * m
     for _ in range(n)
 ]
@@ -22,12 +22,12 @@ def bfs():
             nr, nc = r + dr, c + dc
 
             if can_go(nr, nc):
-                grid[nr][nc] = 1
+                visited[nr][nc] = 1
                 q.append((nr, nc))
 
 
 def can_go(r, c):
-    return in_range(r, c) and not grid[r][c] and snake_grid[r][c]
+    return in_range(r, c) and not visited[r][c] and snake_grid[r][c]
 
 
 def in_range(r, c):
@@ -35,8 +35,8 @@ def in_range(r, c):
 
 
 
-grid[0][0] = 1
+visited[0][0] = 1
 q.append((0, 0))
 bfs()
 
-print(grid[n - 1][m - 1])
+print(visited[n - 1][m - 1])
