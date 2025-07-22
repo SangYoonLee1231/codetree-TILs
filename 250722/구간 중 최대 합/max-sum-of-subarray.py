@@ -4,7 +4,7 @@ arr = list(map(int, input().split()))
 # Please write your code here.
 max_sum = 0
 
-for i in range(n - k):
+for i in range(n - k + 1):
     temp_sum = 0
 
     for j in range(k):
