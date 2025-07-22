@@ -2,8 +2,9 @@ n, k = map(int, input().split())
 arr = list(map(int, input().split()))
 
 # Please write your code here.
+max_sum = 0
+
 for i in range(n - k):
-    max_sum = 0
     temp_sum = 0
 
     for j in range(k):
