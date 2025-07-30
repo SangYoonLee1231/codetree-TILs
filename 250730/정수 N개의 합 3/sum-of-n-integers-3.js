@@ -12,22 +12,12 @@ let ans = 0;
 // 초기화
 prefixSum[1][1] = grid[0][0]
 
-for (let i = 1; i < n; i++) {
-    prefixSum[i + 1][1] = prefixSum[i][1] + grid[i][0];
-}
-
-for (let i = 1; i < n; i++) {
-    prefixSum[1][i + 1] = prefixSum[1][i] + grid[0][i];
-}
-
-//
 for (let i = 1; i <= n; i++) {
     for (let j = 1; j <= n; j++) {
         prefixSum[i][j] = prefixSum[i - 1][j] + prefixSum[i][j - 1] - prefixSum[i - 1][j - 1] + grid[i - 1][j - 1];
     }
 }
 
-//
 for (let i = k; i <= n; i++) {
     for (let j = k; j <= n; j++) {
         maxGrid[i][j] = prefixSum[i][j] - prefixSum[i - k][j] - prefixSum[i][j - k] + prefixSum[i - k][j - k] 
